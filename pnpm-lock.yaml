@@ -9,30 +9,38 @@ specifiers:
   '@iconify-json/ant-design': ^1.1.3
   '@iconify-json/ion': ^1.1.4
   '@intlify/vite-plugin-vue-i18n': ^6.0.3
+  '@types/crypto-js': ^4.1.1
   '@types/lodash-es': ^4.17.6
   '@types/node': 18.7.18
   '@types/nprogress': ^0.2.0
   '@types/qs': ^6.9.7
+  '@types/three': ^0.144.0
   '@vitejs/plugin-vue': ^3.1.0
   '@vueuse/core': ^9.3.0
   '@vueuse/head': 0.9.7
   ant-design-vue: ^3.2.13
+  crypto-js: ^4.1.1
   eslint: ^8.25.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-prettier: ^4.2.1
   eslint-plugin-vue: ^9.6.0
+  gsap: ^3.11.3
   less: ^4.1.3
   lodash-es: ^4.17.21
   nprogress: ^0.2.0
+  pietile-eventemitter: ^1.0.1
   pinia: ^2.0.23
   prettier: ^2.7.1
   qs: ^6.11.0
+  three: ^0.145.0
+  three-orbitcontrols: ^2.110.3
   typescript: ^4.6.4
   unocss: ^0.45.29
   unplugin-auto-import: ^0.11.2
   unplugin-icons: ^0.14.11
   unplugin-vue-components: ^0.22.8
   vite: ^3.1.0
+  vite-plugin-glsl: ^0.5.3
   vite-plugin-inspect: ^0.7.5
   vite-plugin-mkcert: ^1.10.1
   vue: ^3.2.37
@@ -50,10 +58,15 @@ dependencies:
   '@vueuse/core': 9.3.1_vue@3.2.41
   '@vueuse/head': 0.9.7_vue@3.2.41
   ant-design-vue: 3.2.13_vue@3.2.41
+  crypto-js: 4.1.1
+  gsap: 3.11.3
   lodash-es: 4.17.21
   nprogress: 0.2.0
+  pietile-eventemitter: 1.0.1
   pinia: 2.0.23_l7r24p6nevbtlimqmqcwa3ouhu
   qs: 6.11.0
+  three: 0.145.0
+  three-orbitcontrols: 2.110.3_three@0.145.0
   vue: 3.2.41
   vue-i18n: 9.2.2_vue@3.2.41
   vue-router: 4.1.5_vue@3.2.41
@@ -62,10 +75,12 @@ devDependencies:
   '@iconify-json/ant-design': 1.1.3
   '@iconify-json/ion': 1.1.4
   '@intlify/vite-plugin-vue-i18n': 6.0.3_vite@3.1.8+vue-i18n@9.2.2
+  '@types/crypto-js': 4.1.1
   '@types/lodash-es': 4.17.6
   '@types/node': 18.7.18
   '@types/nprogress': 0.2.0
   '@types/qs': 6.9.7
+  '@types/three': 0.144.0
   '@vitejs/plugin-vue': 3.1.2_vite@3.1.8+vue@3.2.41
   eslint: 8.25.0
   eslint-config-prettier: 8.5.0_eslint@8.25.0
@@ -79,6 +94,7 @@ devDependencies:
   unplugin-icons: 0.14.12
   unplugin-vue-components: 0.22.8_vue@3.2.41
   vite: 3.1.8_less@4.1.3
+  vite-plugin-glsl: 0.5.3_vite@3.1.8
   vite-plugin-inspect: 0.7.5_vite@3.1.8
   vite-plugin-mkcert: 1.10.1_vite@3.1.8
   vue-eslint-parser: 9.1.0_eslint@8.25.0
@@ -664,6 +680,10 @@ packages:
       nanopop: 2.2.0
     dev: false
 
+  /@types/crypto-js/4.1.1:
+    resolution: {integrity: sha512-BG7fQKZ689HIoc5h+6D2Dgq1fABRa0RbBWKBd9SP/MVRVXROflpm5fhwyATX5duFmbStzyzyycPB8qUYKDH3NA==}
+    dev: true
+
   /@types/estree/1.0.0:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
@@ -690,8 +710,18 @@ packages:
     resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
     dev: true
 
+  /@types/three/0.144.0:
+    resolution: {integrity: sha512-psvEs6q5rLN50jUYZ3D4pZMfxTbdt3A243blt0my7/NcL6chaCZpHe2csbCtx0SOD9fI/XnF3wnVUAYZGqCSYg==}
+    dependencies:
+      '@types/webxr': 0.5.0
+    dev: true
+
   /@types/web-bluetooth/0.0.16:
     resolution: {integrity: sha512-oh8q2Zc32S6gd/j50GowEjKLoOVOwHP/bWVjKJInBwQqdOYMdPrf1oVlelTlyfFK3CKxL1uahMDAr+vy8T7yMQ==}
+
+  /@types/webxr/0.5.0:
+    resolution: {integrity: sha512-IUMDPSXnYIbEO2IereEFcgcqfDREOgmbGqtrMpVPpACTU6pltYLwHgVkrnYv0XhWEcjio9sYEfIEzgn3c7nDqA==}
+    dev: true
 
   /@unocss/astro/0.45.30_vite@3.1.8:
     resolution: {integrity: sha512-eF5FxSasaKveOAIFVJlHD0dlvKDmL7oBCFQihr6XR8RhbkkMI8mO0lJB0i6QK3PtJY7F6ceCSMe+bAht6Q067w==}
@@ -1290,6 +1320,10 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /crypto-js/4.1.1:
+    resolution: {integrity: sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==}
+    dev: false
 
   /css-tree/2.2.1:
     resolution: {integrity: sha512-OA0mILzGc1kCOCSJerOeqDxDQ4HOh+G8NbOJFOTgOCzpw7fCBubk0fEyxp8AgOL/jvLgYA/uV0cMbe43ElF1JA==}
@@ -1971,6 +2005,10 @@ packages:
     resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
     dev: true
 
+  /gsap/3.11.3:
+    resolution: {integrity: sha512-xc/iIJy+LWiMbRa4IdMtdnnKa/7PXEK6NNzV71gdOYUVeTZN7UWnLU0fB7Hi1iwiz4ZZoYkBZPPYGg+2+zzFHA==}
+    dev: false
+
   /gzip-size/6.0.0:
     resolution: {integrity: sha512-ax7ZYomf6jqPTQ4+XCpUGyXKHk5WweS+e05MBO4/y3WJ5RkmPXNKvX+bx1behVILVwr6JSQvZAku021CHPXG3Q==}
     engines: {node: '>=10'}
@@ -2508,6 +2546,10 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
+  /pietile-eventemitter/1.0.1:
+    resolution: {integrity: sha512-AZ8n34t6n/4I5h4kH0sO9JzW/l6QA2xZsSZu3l0M36Wg1pWk8CAnMuC6POCt88oqhCWYU2SHWeSN5vtRkh+qvQ==}
+    dev: false
+
   /pify/4.0.1:
     resolution: {integrity: sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==}
     engines: {node: '>=6'}
@@ -2791,6 +2833,22 @@ packages:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
     dev: true
 
+  /three-orbitcontrols/2.110.3_three@0.145.0:
+    resolution: {integrity: sha512-BNNbksJwbN3/MmT0X/gjz5ZCchm7bjk26SUdtJYRxfEYjDfkb/0PeUTHE/KuyJ5vb/owK3mojyy3vcqDx99sRA==}
+    deprecated: |
+      three-js exposes real modules now via three/examples/jsm/...
+      for example to import Orbit, do
+      import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+    peerDependencies:
+      three: '>= 0.110.0'
+    dependencies:
+      three: 0.145.0
+    dev: false
+
+  /three/0.145.0:
+    resolution: {integrity: sha512-EKoHQEtEJ4CB6b2BGMBgLZrfwLjXcSUfoI/MiIXUuRpeYsfK5aPWbYhdtIVWOH+x6X0TouldHKHBuc/LAiFzAw==}
+    dev: false
+
   /to-fast-properties/2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
@@ -2999,6 +3057,18 @@ packages:
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+    dev: true
+
+  /vite-plugin-glsl/0.5.3_vite@3.1.8:
+    resolution: {integrity: sha512-BsMDK+kdZ2glR1R06KVLuYvsHnD/1mb9a8yZba/nsGViipsDJP6T5W8ChJfhtzAUhXf9V4lsCaq24NqhPVyQ8w==}
+    engines: {node: '>= 16.15.1', npm: '>= 8.11.0'}
+    peerDependencies:
+      vite: ^3.0.0
+    dependencies:
+      '@rollup/pluginutils': 5.0.1
+      vite: 3.1.8_less@4.1.3
+    transitivePeerDependencies:
+      - rollup
     dev: true
 
   /vite-plugin-inspect/0.7.5_vite@3.1.8:
