@@ -5,4 +5,5 @@ export enum PageEnum {
   BASE_HOME = '/dashboard',
   // error page path
   ERROR_PAGE = '/exception',
+  REDIRECT_NAME = 'Redirect',
 }

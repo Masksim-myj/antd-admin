@@ -15,3 +15,13 @@ not-found: 未找到页面
 app:
   menuLoading: 菜单加载中...
 login: 登录
+header:
+  tooltipEntryFull: '全屏'
+  tooltipExitFull: '退出全屏'
+  tooltipNotify: '消息通知'
+  dropdownItemLoginOut: '退出系统'
+  userInfo: '个人中心'
+  search: '搜索'
+form:
+  query: '查询'
+  reset: '重置'

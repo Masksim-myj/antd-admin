@@ -1,5 +1,5 @@
 import type { BasicResult } from '/@/api/model/baseModel';
-import type { getMenuListResultModel, MenuParams } from './model/menuModel';
+import type { getMenuListResultModel, MenuParams, RouteItem } from './model/menuModel';
 import { defHttp } from '/@/utils/axios';
 // import { menuList } from './menulist';
 
@@ -13,7 +13,7 @@ enum Api {
  * @description: Get user menu based on id
  */
 
-export const getBackMenuList = () => defHttp.get<getMenuListResultModel>({ url: Api.GetMenuList });
+export const getBackMenuList = () => defHttp.get<RouteItem[]>({ url: Api.GetMenuList });
 
 export const getList = (params?: MenuParams) =>
   defHttp.get<getMenuListResultModel>({ url: Api.List, params });

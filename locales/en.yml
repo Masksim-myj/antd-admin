@@ -15,3 +15,13 @@ not-found: Not found
 app:
   menuLoading: Loading
 login: Login
+header:
+  tooltipEntryFull: 'Full Screen'
+  tooltipExitFull: 'Exit Full Screen'
+  tooltipNotify: 'Notification'
+  dropdownItemLoginOut: 'Login Out'
+  userInfo: 'User info'
+  search: 'Search'
+form:
+  query: 'Query'
+  reset: 'Reset'

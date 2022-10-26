@@ -4,7 +4,7 @@ export const prefixCls = 'vben';
 
 export const darkMode = ThemeEnum.LIGHT;
 
-export const primaryColor = '#f40';
+export const primaryColor = '#0960bd';
 
 // app theme preset color
 export const APP_PRESET_COLOR_LIST: string[] = [

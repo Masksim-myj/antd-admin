@@ -18,6 +18,5 @@ export const install = (app: App) => {
     locale: 'en',
     messages,
   });
-  console.log(i18n);
   app.use(i18n);
 };

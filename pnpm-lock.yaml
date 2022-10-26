@@ -15,6 +15,7 @@ specifiers:
   '@types/nprogress': ^0.2.0
   '@types/qs': ^6.9.7
   '@types/three': ^0.144.0
+  '@unocss/reset': ^0.45.30
   '@vitejs/plugin-vue': ^3.1.0
   '@vueuse/core': ^9.3.0
   '@vueuse/head': 0.9.7
@@ -48,6 +49,8 @@ specifiers:
   vue-i18n: ^9.2.2
   vue-router: ^4.1.5
   vue-tsc: ^0.40.4
+  vxe-table: ^4.3.5
+  xe-utils: ^3.5.7
 
 dependencies:
   '@ant-design/icons-vue': 6.1.0_vue@3.2.41
@@ -55,6 +58,7 @@ dependencies:
   '@formily/core': 2.2.8
   '@formily/reactive-vue': 2.2.8_vue@3.2.41
   '@formily/vue': 2.2.8_l7r24p6nevbtlimqmqcwa3ouhu
+  '@unocss/reset': 0.45.30
   '@vueuse/core': 9.3.1_vue@3.2.41
   '@vueuse/head': 0.9.7_vue@3.2.41
   ant-design-vue: 3.2.13_vue@3.2.41
@@ -70,6 +74,8 @@ dependencies:
   vue: 3.2.41
   vue-i18n: 9.2.2_vue@3.2.41
   vue-router: 4.1.5_vue@3.2.41
+  vxe-table: 4.3.5_vue@3.2.41+xe-utils@3.5.7
+  xe-utils: 3.5.7
 
 devDependencies:
   '@iconify-json/ant-design': 1.1.3
@@ -833,7 +839,6 @@ packages:
 
   /@unocss/reset/0.45.30:
     resolution: {integrity: sha512-m6+M3E2cTPhX+2aKocRfDqQt7ebEtjJHH8sVYpX8xJoN0vOqjSNmUYc6AIkwUYljx4QbEC3thcQSbqel82RbXQ==}
-    dev: true
 
   /@unocss/scope/0.45.30:
     resolution: {integrity: sha512-SBxjMNLGHiZA32hGTGZL1wpPfzegCd3WB8LdrZwAgo85EbMYCq8UEL6YhScjL3+FIwhcZQutenasLoRNcbFHqw==}
@@ -3231,6 +3236,16 @@ packages:
       '@vue/server-renderer': 3.2.41_vue@3.2.41
       '@vue/shared': 3.2.41
 
+  /vxe-table/4.3.5_vue@3.2.41+xe-utils@3.5.7:
+    resolution: {integrity: sha512-JEvGAs7SBN1rWn5f2tkoRiXd/rAT7RfnDTTlFsHsTtASiUTKNTISI2WBsVeLkkNRTs0SXh6FgrYsIPO2soSBXA==}
+    peerDependencies:
+      vue: ^3.2.28
+      xe-utils: ^3.5.0
+    dependencies:
+      vue: 3.2.41
+      xe-utils: 3.5.7
+    dev: false
+
   /warning/4.0.3:
     resolution: {integrity: sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==}
     dependencies:
@@ -3273,6 +3288,10 @@ packages:
   /wrappy/1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
     dev: true
+
+  /xe-utils/3.5.7:
+    resolution: {integrity: sha512-3H+fDBKBR2wLJgyA7k9C/w1Xljx6Maml5ukV0WDY06HjYyGs2FEz6XhcwRCLIDXX4pBP3Gu0nX9DbCeuuRA2Ew==}
+    dev: false
 
   /xml-name-validator/4.0.0:
     resolution: {integrity: sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw==}

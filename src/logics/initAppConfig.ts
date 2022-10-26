@@ -15,7 +15,6 @@ import { useAppStore } from '/@/store/app';
 
 import { getCommonStoragePrefix, getStorageShortName } from '/@/utils/env';
 
-import { primaryColor } from '/@/settings/designSetting';
 import { Persistent } from '/@/utils/cache/persistent';
 import { merge } from 'lodash-es';
 // import { ThemeEnum } from '/@/enums/appEnum';
@@ -31,7 +30,6 @@ export function initAppConfigStore() {
   ConfigProvider.config({
     theme: { primaryColor: projCfg.themeColor },
   });
-  console.log(projCfg);
   //   const darkMode = appStore.getDarkMode;
   //   const {
   //     themeColor,

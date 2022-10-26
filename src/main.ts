@@ -4,6 +4,8 @@ import App from './App.vue';
 import 'uno.css';
 import 'nprogress/nprogress.css';
 import 'ant-design-vue/dist/antd.variable.less';
+import '/@/design/index.less';
+import 'vxe-table/lib/style.css';
 
 import { createHead } from '@vueuse/head';
 import { setupRouter, router } from '/@/router';
@@ -21,6 +23,6 @@ Object.values(import.meta.glob<{ install: Fn }>('./modules/*.ts', { eager: true 
 // 初始化内部系统配置
 initAppConfigStore();
 // 路由守卫
-// setupRouterGuard(router);
+setupRouterGuard(router);
 app.use(createHead());
 app.mount('#app');

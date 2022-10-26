@@ -31,20 +31,9 @@ export interface ProjectConfig {
 
 export interface MenuSetting {
   bgColor: string;
-  fixed: boolean;
   collapsed: boolean;
-  siderHidden: boolean;
-  canDrag: boolean;
-  show: boolean;
   hidden: boolean;
-  split: boolean;
-  menuWidth: number;
   theme: ThemeEnum;
-  topMenuAlign: 'start' | 'center' | 'end';
-  accordion: boolean;
-  closeMixSidebarOnChange: boolean;
-  collapsedShowTitle: boolean;
-  mixSideFixed: boolean;
 }
 
 export interface MultiTabsSetting {
@@ -101,3 +90,5 @@ export interface GlobConfig {
   // Project abbreviation
   shortName: string;
 }
+
+export type LocaleType = 'zh_CN' | 'en';

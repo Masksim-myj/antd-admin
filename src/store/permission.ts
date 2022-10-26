@@ -7,6 +7,7 @@ import { i18n } from '/@/modules/i18n';
 import { getBackMenuList } from '/@/api/basic/menu';
 import { transformRouteToMenu } from '/@/router/helper/menuHelper';
 import { transformObjToRoute } from '/@/router/helper/routeHelper';
+import { PAGE_NOT_FOUND_ROUTE } from '/@/router/routes/basic';
 
 interface PermissionState {
   isDynamicAddedRoute: boolean;
@@ -84,11 +85,11 @@ export const usePermissionStore = defineStore('app-permission', () => {
     });
 
     let result = await getBackMenuList();
-    let routeList = result.data;
-    routeList = transformObjToRoute(routeList);
+    result = transformObjToRoute(result);
     //  后台路由到菜单结构
-    const menuList = transformRouteToMenu(routeList);
+    const menuList = transformRouteToMenu(result);
     setMenuList(menuList as Menu[]);
+    routes = [PAGE_NOT_FOUND_ROUTE, ...result];
 
     patchHomeAffix(routes);
     return routes;
