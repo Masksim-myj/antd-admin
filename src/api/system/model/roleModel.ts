@@ -14,3 +14,7 @@ export interface SetRoleStatusParams {
   roleId: number;
   status: string;
 }
+
+export interface GetSelectResult {
+  checkedKeys: number[];
+}

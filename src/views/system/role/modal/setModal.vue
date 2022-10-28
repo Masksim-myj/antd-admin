@@ -1,17 +1,17 @@
 <template>
-  <a-modal v-model:visible="visible" :title="getTitle" :confirm-loading="loading" @ok="handleOk">
-    <p>222</p>
-  </a-modal>
+  <FormLayout labelCol="6" wrapperCol="10">
+    <SchemaField :schema="schema" />
+  </FormLayout>
 </template>
 
 <script setup lang="ts">
-  const loading = ref(false);
-  const props = defineProps({
-    isEdit: { type: Boolean, defalut: false },
-    visible: { type: Boolean, defalut: false },
+  import { FormItem, FormLayout } from '@formily/antdv-x3';
+  import { createSchemaField } from '@formily/vue';
+  import { schema } from './setData';
+
+  const { SchemaField } = createSchemaField({
+    components: { FormItem, FormLayout },
   });
-  const getTitle = computed(() => (props.isEdit ? '修改角色' : '新增角色'));
-  const handleOk = () => {};
 </script>
 
 <style scoped></style>

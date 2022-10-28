@@ -1,21 +1,24 @@
 <template>
-  <div class="flex-center-h-full justify-between">
-    <div class="flex-center-h-full text-white">
-      <div class="collapsedBtn flex-center-h-full" @click="menuSetting.changeCollapsed">
-        <div class="text-lg" :class="unfoldClass"></div>
+  <div class="h-full">
+    <div class="flex-center-h-full">
+      <div class="flex-center-h-full text-white">
+        <div class="collapsedBtn flex-center-h-full" @click="menuSetting.changeCollapsed">
+          <div class="text-lg" :class="unfoldClass"></div>
+        </div>
+        <a-breadcrumb class="breadcrumb" :routes="routes">
+          <template #itemRender="{ route, routes, paths }">
+            <span v-if="hasRedirect(routes, route)">
+              {{ route.meta.title }}
+            </span>
+            <router-link v-else to="" @click="handleClick(route, paths, $event)">
+              {{ route.meta.title }}
+            </router-link>
+          </template>
+        </a-breadcrumb>
       </div>
-      <a-breadcrumb class="breadcrumb" :routes="routes">
-        <template #itemRender="{ route, routes, paths }">
-          <span v-if="hasRedirect(routes, route)">
-            {{ route.meta.title }}
-          </span>
-          <router-link v-else to="" @click="handleClick(route, paths, $event)">
-            {{ route.meta.title }}
-          </router-link>
-        </template>
-      </a-breadcrumb>
+      <rightHeader />
     </div>
-    <rightHeader />
+    <Tabs />
   </div>
 </template>
 
@@ -28,6 +31,7 @@
   import { useMenuSetting } from '/@/hooks/setting/useMenuSetting';
   import { REDIRECT_NAME } from '/@/router/constant';
   import rightHeader from './rightHeader.vue';
+  import Tabs from '../Tabs/index.vue';
   import { filter } from '/@/utils/helper/treeHelper';
   import { getAllParentPath } from '/@/router/helper/menuHelper';
 
@@ -139,7 +143,7 @@
 
 <style lang="less" scoped>
   .flex-center-h-full {
-    @apply flex items-center h-full;
+    @apply flex items-center h-16 justify-between;
   }
   .collapsedBtn {
     @apply justify-center  w-9 cursor-pointer overflow-hidden;

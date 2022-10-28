@@ -103,22 +103,21 @@
       height: 24px;
       border-radius: 4px;
       color: #fff;
-      background-color: #55d187;
     }
     .edit {
-      background-color: #55d187;
+      background-color: #83d780;
     }
     .details {
-      background-color: #55d187;
+      background-color: #85a5df;
     }
     .error {
       background-color: #ff4d4f;
     }
     .handle {
-      background-color: #55d187;
+      background-color: #57aecc;
     }
     .power {
-      background-color: #55d187;
+      background-color: #f69770;
     }
   }
 </style>

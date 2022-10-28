@@ -1,6 +1,7 @@
 import type { PluginOption } from 'vite';
 import path from 'path';
 import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 import mkcert from 'vite-plugin-mkcert';
 import Unocss from 'unocss/vite';
 import VueI18n from '@intlify/vite-plugin-vue-i18n';
@@ -13,6 +14,7 @@ import { configAutoImportPlugin } from './autoImport';
 
 export const createVitePlugins = (): PluginOption[] => [
   vue(),
+  vueJsx(),
   mkcert(),
   VueI18n({
     runtimeOnly: true,

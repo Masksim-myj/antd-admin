@@ -1,18 +1,19 @@
 <template>
-  <BasicTable
-    :schema="schema"
-    :gridOptions="gridOptions"
-    :actions="actions"
-    @submit="getListData"
-  />
-  <setModalVue />
+  <BasicTable :schema="schema" :gridOptions="gridOptions" :actions="actions" @submit="getListData">
+    <template #tools>
+      <a-button class="mr-4" type="primary">新增</a-button>
+      <a-button type="primary" danger>删除</a-button>
+    </template>
+  </BasicTable>
 </template>
 
 <script setup lang="ts">
   import type { VxeGridProps } from 'vxe-table';
+  import { FormDialog } from '@formily/antdv-x3';
   import { schema, columns } from './data';
-  import { getRoleList } from '/@/api/system/role';
+  import { getRoleList, getRoleMenuTreeSelect, editRole } from '/@/api/system/role';
   import setModalVue from './modal/setModal.vue';
+  import depModalVue from './modal/depModal.vue';
 
   const gridOptions = reactive<VxeGridProps>({
     align: 'center',
@@ -23,13 +24,50 @@
   });
 
   const handleEdit = (e) => {
-    console.log(e);
+    FormDialog('修改角色', setModalVue as any)
+      .forOpen((_payload, next) => {
+        getRoleMenuTreeSelect(e.roleId).then((res) => {
+          next({ initialValues: { ...e, menuIds: res.checkedKeys } });
+        });
+      })
+      .forConfirm(async (payload, next) => {
+        await editRole(payload.values);
+        await getListData({});
+        next();
+      })
+      .open()
+      .catch(console.error);
   };
   const handleDelete = (e) => {
     console.log(e);
   };
   const handleDataScope = (e) => {
     console.log(e);
+    FormDialog('修改角色', depModalVue as any)
+      .forOpen((_payload, next) => {
+        setTimeout(() => {
+          next({
+            initialValues: {
+              aaa: '123',
+            },
+          });
+        }, 1000);
+      })
+      .forConfirm((payload, next) => {
+        setTimeout(() => {
+          console.log(payload);
+          next(payload);
+        }, 1000);
+      })
+      .forCancel((payload, next) => {
+        setTimeout(() => {
+          console.log(payload);
+          next(payload);
+        }, 1000);
+      })
+      .open()
+      .then(console.log)
+      .catch(console.error);
   };
   const handleAuthUser = (e) => {
     console.log(e);

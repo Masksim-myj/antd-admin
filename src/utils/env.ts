@@ -44,3 +44,7 @@ export function getAppEnvConfig() {
     VITE_GLOB_UPLOAD_URL,
   };
 }
+
+export function isProdMode(): boolean {
+  return import.meta.env.PROD;
+}
